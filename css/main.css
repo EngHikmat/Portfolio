@@ -65,8 +65,9 @@ a {
   text-transform: uppercase;
   width: fit-content;
   font-weight: normal;
-  color: var(--main-color);
+  color: #333;
   position: relative;
+  z-index: 5;
 }
 .main-title::before {
   content: "";
@@ -76,7 +77,7 @@ a {
   top: 0px;
   right: 0;
   border-radius: 20px;
-  background-color: var(--secondary-color);
+  background-color: var(--main-color);
   transform: skewY(20deg) skewX(50deg);
   -webkit-transform: skewY(20deg) skewX(-50deg);
   -moz-transform: skewY(20deg) skewX(-50deg);
@@ -96,7 +97,7 @@ a {
   top: 0px;
   left: 0;
   border-radius: 20px;
-  background-color: var(--secondary-color);
+  background-color: var(--main-color);
   transform: skewY(-20deg) skewX(-50deg);
   -webkit-transform: skewY(-20deg) skewX(-50deg);
   -moz-transform: skewY(-20deg) skewX(-50deg);
@@ -471,19 +472,27 @@ a {
   padding-bottom: var(--section-padding);
 }
 .skills .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 40px;
-  justify-content: space-between;
+  /*display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 40px;**/
+  display: flex;
+  flex-wrap: wrap;
+ 
+  
+  
 }
-@media (max-width: 991px) {
+@media (max-width: 771px) {
   .skills .container {
-    gap: 0;
+    flex-direction: column;
   }
 }
-
+.skills .container .column{
+  flex: 1;
+  margin: 0 15px;
+}
 .skills .container .column .prog-holder {
   margin-bottom: 20px;
+
 }
 
 .skills .container .column .prog-holder h4 {
