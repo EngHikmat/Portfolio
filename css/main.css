@@ -606,7 +606,7 @@ a {
   max-width: 100%;
 }
 .projects .container .card h2 {
-  margin: 20px 0 0;
+  margin: 20px 0 7px;
   font-size: 20px;
   color: var(--main-color);
 }
@@ -615,6 +615,9 @@ a {
   line-height: 1.5;
   font-size: 15px;
   color: #777;
+  height: 130px;
+  overflow-y: auto;
+ 
 }
 .projects .container .card a {
   display: block;
