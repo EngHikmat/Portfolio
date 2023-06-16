@@ -660,6 +660,30 @@ a {
 .card .links .source:hover {
   background-color: #24292edb !important;
 }
+.card .links .source.disabled {
+  position: relative;
+  pointer-events: none;
+  user-select: none;
+  background-color: #2b31379e !important;
+}
+.card .links .source.disabled::after {
+  content: "\f023";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  font-weight: 900;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(1.5px);
+  pointer-events: none;
+  background-color: #2d2d2e39;
+  font-size: 20px;
+}
 .projects .container .card a {
   display: flex;
   justify-content: center;
@@ -678,6 +702,92 @@ a {
   background-color: var(--hover-color);
 }
 /*  End Projects  */
+/* Start Contact */
+.contact .container {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.contact .container div.text {
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact .container div.text h1 {
+  font-weight: 200;
+  font-size: 45px;
+  color: var(--main-color);
+  line-height: 0;
+}
+.contact .container div {
+}
+.contact .container div label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: var(--main-color);
+}
+.contact .container div input {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--secondary-color);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.contact .container div textarea {
+  width: 100%;
+  resize: none;
+  background-color: var(--secondary-color);
+  outline: none;
+  border: none;
+  padding: 15px;
+}
+.contact .container .button {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.contact .container .button button {
+  border: none;
+  background-color: var(--main-color);
+  padding: 15px;
+  color: white;
+  border-radius: 10px;
+  margin-top: 15px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: var(--transition) ease;
+  -webkit-transition: var(--transition) ease;
+  -moz-transition: var(--transition) ease;
+  -ms-transition: var(--transition) ease;
+  -o-transition: var(--transition) ease;
+  cursor: pointer;
+}
+
+.contact .container .button button:hover {
+  background-color: var(--hover-color);
+}
+/* End Contact */
+/* Start Footer */
+.footer {
+  background-color: #2b3137;
+}
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .container p {
+  color: white;
+}
+/* End Footer */
 /*  Start Animations  */
 @keyframes speak {
   0%,
