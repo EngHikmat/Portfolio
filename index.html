@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap"
       rel="stylesheet"
     />
+
     <title>Hikmat Malkawi</title>
   </head>
   <body>
@@ -20,6 +21,7 @@
     <div class="header">
       <div class="container">
         <h2>Hikmat</h2>
+        <!-- <img src="./img/logo.png" alt="" /> -->
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -34,14 +36,11 @@
       <div class="container">
         <div class="social">
           <a href=""><i class="fa-brands fa-facebook"></i></a>
-          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-github"></i></a>
           <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
         <div class="text">
-          <h1>
-            <span class="small">H ,</span> <span class="big">Hi,</span>I'm
-            Hikmat
-          </h1>
+          <h1>Hi, I'm Hikmat</h1>
           <p class="role">Front-end Developer</p>
           <p>
             Front End Developer with 2 years of experience, I have a good
@@ -54,12 +53,11 @@
           <button>Contact Me <i class="fa-solid fa-circle-right"></i></button>
         </div>
         <div class="image">
-          <div class="speak">
+          <!-- <div class="speak">
             <p>Welcome to my portfolio, hope you will find what you need.</p>
             <p>Hikmat,</p>
-          </div>
-
-          <img src="img/User.png" alt="" />
+          </div> -->
+          <img src="img/avatar.svg" alt="" />
         </div>
       </div>
       <div class="scroll-down">
@@ -323,9 +321,21 @@
     <!--Start Footer-->
     <div class="footer">
       <div class="container">
-        <p>Hikmat Malkawi &copy; 2023</p>
+        <p>Hikmat Malkawi &copy;2023</p>
+        <span>All rights are reserved.</span>
+        <div class="social">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-github"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
       </div>
     </div>
     <!--End Footer-->
+    <!--Scroll Up Button-->
+    <button onclick="scrollToTop()" id="scrollUpBtn" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!--End Scroll Up Button-->
   </body>
+  <script src="./js/button.js"></script>
 </html>
