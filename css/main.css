@@ -183,7 +183,13 @@ a {
   background-color: transparent;
   color: var(--main-color);
 }
-
+.small-text {
+  font-size: 12px;
+  font-weight: 500;
+}
+.padding-full {
+  padding: 15px;
+}
 /*  End Compoments  */
 
 /*  Start Header  */
