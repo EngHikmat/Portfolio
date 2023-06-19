@@ -605,26 +605,35 @@ a {
 .skills .container .column .prog-holder {
   margin-bottom: 20px;
 }
+.skills .container .column .prog-holder .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .skills .container .column .prog-holder h4 {
   font-weight: normal;
-  font-size: 15px;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.skills .container .column .prog-holder h4:last-child {
+  color: var(--main-color);
 }
 .skills .container .column .prog-holder .prog {
-  height: 30px;
+  height: 10px;
   width: 100%;
   background-color: var(--secondary-color);
   position: relative;
-  border-radius: 10px;
+  border-radius: 2px;
   overflow: hidden;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 }
 .skills .container .column .prog-holder .prog span {
   background-color: var(--main-color);
-  height: 30px;
+  height: 10px;
   width: 100%;
   display: block;
   animation: color 2s infinite ease alternate;
@@ -674,14 +683,14 @@ a {
 }
 .projects .shapes i {
   position: absolute;
-  bottom: 300px;
-  right: 600px;
+  bottom: 200px;
+  right: 360px;
   color: #6b59d106;
   font-size: 200px;
   z-index: -1;
 }
 .projects .shapes i:nth-child(2) {
-  bottom: 100px;
+  bottom: 300px;
   left: 40px;
 }
 
