@@ -27,15 +27,15 @@
   </head>
   <body>
     <!--Start Header-->
-    <div class="header">
+    <div class="header" id="header">
       <div class="container">
         <h2>Hikmat</h2>
         <!-- <img src="./img/logo.png" alt="" /> -->
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li onclick="ScrollToLink('header')"><span>Home</span></li>
+          <li onclick="ScrollToLink('skills')"><span>Skills</span></li>
+          <li onclick="ScrollToLink('projects')"><span>Projects</span></li>
+          <li onclick="ScrollToLink('contact')"><span>Contact</span></li>
           <li>
             <button class="button-bordered small-text" onclick="downloadCV()">
               Download CV <i class="fa-solid fa-download"></i>
@@ -49,9 +49,15 @@
     <div class="landing">
       <div class="container">
         <div class="social">
-          <a href=""><i class="fa-brands fa-facebook"></i></a>
-          <a href=""><i class="fa-brands fa-github"></i></a>
-          <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://web.facebook.com/hekmat.malkawi/" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://github.com/EngHikmat" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/hikmat-malkawi/" target="_blank"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
         </div>
         <div class="text">
           <h1>Hi, I'm Hikmat</h1>
@@ -68,7 +74,10 @@
             <button class="button-bordered padding-full" onclick="downloadCV()">
               Download CV <i class="fa-solid fa-download"></i>
             </button>
-            <button class="button-filled padding-full">
+            <button
+              class="button-filled padding-full"
+              onclick="ScrollToLink('contact')"
+            >
               Contact Me <i class="fa-solid fa-paper-plane"></i>
             </button>
           </div>
@@ -437,24 +446,36 @@
       <div class="container">
         <div class="text">
           <h1>Contact Me</h1>
-          <p>Let's keep in touch</p>
+          <p>
+            Let's keep in touch, please fill you information and send your
+            message.
+          </p>
         </div>
-        <div>
-          <label for="">Email</label>
-          <input type="text" />
-        </div>
-        <div>
-          <label for="">Subject</label>
-          <input type="text" />
-        </div>
-        <div>
-          <label for="">Message</label>
-          <textarea rows="20"></textarea>
-        </div>
-        <div class="button">
-          <button class="button-filled padding-full">
-            Submit <i class="fa-solid fa-circle-check"></i>
-          </button>
+        <div class="form">
+          <div class="form-group">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" autocomplete="email" />
+            </div>
+          </div>
+
+          <div>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" />
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea rows="10" id="message" name="message"></textarea>
+          </div>
+          <div class="button" onclick="sendEmail()">
+            <button class="button-dark padding-full">
+              Submit <i class="fa-solid fa-circle-check"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -478,6 +499,8 @@
     </button>
     <!--End Scroll Up Button-->
   </body>
+  <script src="./js/scrollLinks.js"></script>
   <script src="./js/button.js"></script>
   <script src="./js/downloadCv.js"></script>
+  <script src="./js/sendEmail.js"></script>
 </html>

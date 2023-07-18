@@ -183,6 +183,29 @@ a {
   background-color: transparent;
   color: var(--main-color);
 }
+.button-dark {
+  background-color: white;
+  outline: none;
+  border: none;
+  padding: 12px;
+  border-radius: 200px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  -ms-border-radius: 200px;
+  -o-border-radius: 200px;
+  border: 1px solid white;
+  color: var(--main-color);
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  cursor: pointer;
+}
+.button-dark:hover {
+  background-color: transparent;
+  color: white;
+}
 .small-text {
   font-size: 12px;
   font-weight: 500;
@@ -194,6 +217,11 @@ a {
 
 /*  Start Header  */
 /* .header {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.814) !important;
+  backdrop-filter: blur(8px);
+  z-index: 2;
+  width: 100%;
 } */
 .header .container {
   display: flex;
@@ -233,20 +261,21 @@ a {
   justify-content: space-evenly;
   align-items: center;
 }
-.header .container ul > li > a {
+.header .container ul > li > span {
   font-size: 15px;
   color: black;
   font-weight: 500;
+  cursor: pointer;
   transition: var(--transition);
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
 }
-.header .container ul > li > a:hover {
+.header .container ul > li > span:hover {
   color: var(--main-color);
 }
-.header .container ul > li > a {
+.header .container ul > li > span {
   margin: 0px 10px;
 }
 
@@ -406,11 +435,11 @@ a {
 .landing .container .text .role {
   font-size: 20px;
   color: var(--main-color);
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 .landing .container .text p {
   font-size: 15px;
-  color: #777;
+  color: #525151;
   max-width: 500px;
   line-height: 1.7;
 }
@@ -908,11 +937,29 @@ a {
 .contact .container {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 991px) {
+  .contact .container {
+    flex-direction: column;
+  }
+  .contact .container div.text {
+    width: 100%;
+  }
+  .contact .form {
+    width: 100%;
+  }
+  .contact .container .text p {
+    max-width: 100%;
+    min-width: 100%;
+  }
 }
 .contact .container div.text {
   padding-bottom: 10px;
-  width: 100%;
-  text-align: center;
+  flex-basis: 50%;
 }
 
 .contact .container .text h1 {
@@ -921,17 +968,49 @@ a {
   color: var(--main-color);
   line-height: 0;
 }
+.contact .container .text p {
+  width: 70%;
+  font-size: 14px;
+}
+.contact .form {
+  flex-basis: 50%;
+  background-color: var(--hover-color);
+  padding: 15px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
 
 .contact .container div label {
   display: block;
   margin-top: 20px;
   margin-bottom: 5px;
-  color: var(--main-color);
+  color: white;
+  font-size: 14px;
+}
+.contact .container .form-group {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .contact .container .form-group {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.contact .container div:first-child {
+  flex: 1;
+}
+.contact .container div:nth-child(2) {
+  flex: 1;
 }
 .contact .container div input {
   width: 100%;
   padding: 15px;
-  background-color: var(--secondary-color);
+  background-color: white;
   outline: none;
   border: none;
   border-radius: 10px;
@@ -943,7 +1022,7 @@ a {
 .contact .container div textarea {
   width: 100%;
   resize: none;
-  background-color: var(--secondary-color);
+  background-color: white;
   outline: none;
   border: none;
   padding: 15px;
