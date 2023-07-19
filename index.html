@@ -443,6 +443,20 @@
     <!--End Projects-->
     <!--Start Contact-->
     <div class="contact" id="contact">
+      <div id="alert">
+        <div>
+          <i class="fa-regular fa-circle-check"></i>
+          <span id="alertContent">The email has been sent successfully</span>
+        </div>
+      </div>
+      <div id="alert-error">
+        <div>
+          <i class="fa-regular fa-circle-xmark"></i>
+          <span id="alertContent"
+            >Error! the email hasn't sent successfully</span
+          >
+        </div>
+      </div>
       <div class="container">
         <div class="text">
           <h1>Contact Me</h1>
@@ -454,22 +468,57 @@
         <div class="form">
           <div class="form-group">
             <div>
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" autocomplete="name" />
+              <label for="name">Name<span>*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                class=""
+                oninput="checkFields('name')"
+              />
+              <p class="validate-message" id="name-validate">
+                *This field is required
+              </p>
             </div>
             <div>
-              <label for="email">Email</label>
-              <input type="text" id="email" name="email" autocomplete="email" />
+              <label for="email">Email<span>*</span></label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                autocomplete="email"
+                oninput="checkFields('email')"
+              />
+              <p class="validate-message" id="email-validate">
+                *This field is required
+              </p>
             </div>
           </div>
 
           <div>
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" />
+            <label for="subject">Subject<span>*</span></label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              oninput="checkFields('subject')"
+            />
+            <p class="validate-message" id="subject-validate">
+              *This field is required
+            </p>
           </div>
           <div>
-            <label for="message">Message</label>
-            <textarea rows="10" id="message" name="message"></textarea>
+            <label for="message">Message<span>*</span></label>
+            <textarea
+              rows="10"
+              id="message"
+              name="message"
+              oninput="checkFields('message')"
+            ></textarea>
+            <p class="validate-message" id="message-validate">
+              *This field is required
+            </p>
           </div>
           <div class="button" onclick="sendEmail()">
             <button class="button-dark padding-full">

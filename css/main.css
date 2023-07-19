@@ -213,6 +213,36 @@ a {
 .padding-full {
   padding: 15px;
 }
+#alert,
+#alert-error {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 350px;
+  padding: 20px 10px;
+  font-size: 14px;
+  color: white;
+  animation: alert 2s infinite ease alternate;
+  -webkit-animation: alert 2s infinite ease alternate;
+}
+#alert {
+  background-color: rgb(7, 197, 99);
+  border-left: 10px solid #0c8042;
+  display: none;
+}
+#alert-error {
+  background-color: rgb(250, 65, 65);
+  border-left: 10px solid #800c0c;
+  display: none;
+}
+@keyframes alert {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*  End Compoments  */
 
 /*  Start Header  */
@@ -991,6 +1021,10 @@ a {
   color: white;
   font-size: 14px;
 }
+.contact .container div label span {
+  color: rgb(207, 1, 1);
+  margin-left: 2px;
+}
 .contact .container .form-group {
   display: flex;
   gap: 15px;
@@ -1019,6 +1053,16 @@ a {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+.invalid-validate {
+  border: 2px solid rgb(207, 1, 1) !important;
+}
+.validate-message {
+  color: rgb(255, 130, 130);
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 2px;
+  display: none;
 }
 .contact .container div textarea {
   width: 100%;
